@@ -26,5 +26,5 @@ RUN python3 -m pip install -r /application/requirements.txt && \
 
 #RUN yum install -y pkg1 pkg2 pkg3 etc
 
-ENTRYPOINT []
-CMD ["python3", "/application/ExampleApplication.py"]
+ENTRYPOINT ["python3", "/application/ExampleApplication.py"]
+### CMD ["python3", "/application/ExampleApplication.py"]
