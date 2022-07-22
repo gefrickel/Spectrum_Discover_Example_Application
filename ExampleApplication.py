@@ -19,6 +19,15 @@ from ibm_spectrum_discover_application_sdk.DocumentRetrievalBase import Document
 
 ENCODING = 'utf-8'
 
+print(os.environ)
+
+for k, v in os.environ.items():
+    print(f'{k}={v}')
+
+sduser =os.environ['APPLICATION_USER']
+sdpassword = os.environ['APPLICATION_USER_PASSWORD']
+print(f'Username {sduser} and Password {sdpassword}')
+
 LOG_LEVELS = {'INFO': logging.INFO, 'DEBUG': logging.DEBUG,
               'ERROR': logging.ERROR, 'WARNING': logging.WARNING}
 LOG_LEVEL = os.environ.get('LOG_LEVEL', 'INFO')
@@ -33,7 +42,10 @@ def main():  # pylint: disable=too-many-locals
         "action_id": "DEEPINSPECT",
         "action_params": ["extract_tags"]
     }
-
+    print ("0,8")
+    env = lambda envKey, default: os.environ.get(envKey, default)
+    print(env('APPLICATION_USER','kaputt'))
+    
     # Create sample application instance
     application = ApplicationBase(registration_info)
     # start function performs all required initializations and connections
