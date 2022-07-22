@@ -19,7 +19,7 @@ LABEL license="mit"
 # a comma delimited key,value pair (ex: param1k:param1v,param2k:param2v).
 #LABEL parameters=""
 ENV SPECTRUM_DISCOVER_HOST=https://spectrum-discover.apps.baremetal2.baremetal2.4ibm.de
-ENV APPLICATION_NAME=file-checksum
+ENV APPLICATION_NAME=example
 ENV APPLICATION_USER=sdadmin
 ENV APPLICATION_USER_PASSWORD=Passw0rd
 ENV KAFKA_DIR=./kafka
