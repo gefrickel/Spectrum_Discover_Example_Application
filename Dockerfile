@@ -21,8 +21,10 @@ LABEL license="mit"
 ENV SPECTRUM_DISCOVER_HOST=https://spectrum-discover.apps.baremetal2.baremetal2.4ibm.de
 ENV APPLICATION_NAME=example
 ENV APPLICATION_USER=sdadmin
+ENV DB2WHREST_USER=bluadmin
+ENV DB2WHREST_PASSWORD=Passw0rd
 ENV APPLICATION_USER_PASSWORD=Passw0rd
-ENV KAFKA_DIR=./kafka
+ENV KAFKA_DIR=/tmp/kafka
 ENV LOG_LEVEL=DEBUG
 
 COPY ExampleApplication.py requirements.txt /application/
