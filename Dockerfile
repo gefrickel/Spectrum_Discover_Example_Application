@@ -28,8 +28,10 @@ RUN python3 -m pip install -r /application/requirements.txt && \
 
 ### ENTRYPOINT ["python3", "/application/ExampleApplication.py"]
 ### CMD ["python3", "/application/ExampleApplication.py"]
-ENTRYPOINT ["python3"]
-CMD ["/application/ExampleApplication.py"]
+### ENTRYPOINT ["python3"]
+### CMD ["/application/ExampleApplication.py"]
+
+ENTRYPOINT ["/bin/sh", "-c", "--" , "while true; do sleep 30; done;"]
 
 
 
